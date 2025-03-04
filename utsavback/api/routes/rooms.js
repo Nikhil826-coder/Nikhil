@@ -1,5 +1,5 @@
 import express from "express";
-import { createRoom, deleteRoom, getRoom, getRooms,updateRoomAvailability, updateRoom } from "../controllers/room.js";
+import { createRoom, deleteRoom, getRoom, getRooms,updateRoomAvailability, updateRoom, } from "../controllers/room.js";
 //import Hotel from "../models/Hotel.js";
  //import Room from "../models/Room.js";
   import {verifyAdmin} from "../utils/verifyToken.js";
@@ -12,7 +12,7 @@ const router = express.Router();
  //UPDATE
  router.put("/:id", verifyAdmin,updateRoom);
  router.put("/availability/:id", updateRoomAvailability);
- 
+
  //DELETE
  router.delete("/:id/:hotelid",verifyAdmin, deleteRoom);
 
@@ -21,5 +21,7 @@ const router = express.Router();
  
  //GET ALL
  router.get("/", getRooms);
+
+ //router.put("/cancel/:transactionId", cancelBooking);
 
 export default router;

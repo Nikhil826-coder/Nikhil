@@ -107,6 +107,9 @@ export const createHotel = async (req, res, next) => {
       next(err);
     }
   };
+
+   
+
   
   /*// Get hotels by city
   export const gethotels = async (req, res, next) => {

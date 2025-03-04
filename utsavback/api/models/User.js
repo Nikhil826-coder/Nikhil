@@ -13,14 +13,14 @@ const UserSchema = new mongoose.Schema(
     },
     state: {
       type: String,
-      required: true,
+      required: false,
     },
     img: {
       type: String,
     },
     city: {
       type: String,
-      required: true,
+      required: false,
     },
     phone: {
       type: String,
@@ -34,6 +34,8 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    resetPasswordToken: { type: String },
+  resetPasswordExpires: { type: Date },
   },
   { timestamps: true }
 );

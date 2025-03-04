@@ -7,7 +7,8 @@ import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import paymentRoutes from "./routes/payments.js";
+import paymentRoutes from "./routes/payments.js"
+import bookingRoutes from "./routes/bookings.js";
  
 
  
@@ -47,6 +48,7 @@ app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 app.use("/api/payments", paymentRoutes);
+app.use("/api/bookings", bookingRoutes);
  
 
 //ERR HANDELING

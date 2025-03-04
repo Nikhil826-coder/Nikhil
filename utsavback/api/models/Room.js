@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 const RoomSchema = new mongoose.Schema(
   {
+    hotelId: { type: mongoose.Schema.Types.ObjectId, ref: "Hotel", required: true },
+    number: Number, // ✅ Room Number
+    type: String,   // ✅ Room Type (e.g., Deluxe, Suite)
+    
     title: {
       type: String,
       required: true,
